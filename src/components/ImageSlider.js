@@ -27,23 +27,31 @@ export default function ImageSlider() {
 
   return (
     <>
-      <div className="flex relatve z-0 overflow-hidden mx-auto  w-full ">
+      <div className="flex relatve z-0 overflow-hidden mx-auto  w-full transition-all ease-out duration-500">
         <FaArrowRight
           className="h-[40px] w-[40px] text-white absolute top-[50%] right-8 cursor-pointer z-1	"
           onClick={prevImgHandle}
         />
-        <div className="pb-[35px] transition-all duration-500 mx-auto ">
+        <div className="pb-[35px] transition-all ease-out duration-500 mx-auto ">
           {images.map((image, index) => (
             <Image
               src={image.image}
               alt={image.alt}
               key={index}
-              className={indexImg === index ? "" : "hidden"}
+              className={
+                indexImg === index
+                  ? "transition-all ease-out duration-500"
+                  : "hidden"
+              }
             />
           ))}
-          <div className="flex justify-center mx-auto mt-[-20px] w-4 h-4 pb-4 cursor-pointer ">
+          <div className="flex justify-center mx-auto mt-[-20px] w-4 h-4 pb-4 cursor-pointer transition-all ease-out duration-500 ">
             {images.map((_, idx) => (
-              <div key={idx} onClick={() => setIndexImg(idx)}>
+              <div
+                key={idx}
+                onClick={() => setIndexImg(idx)}
+                className="transition-all ease-out duration-500"
+              >
                 {idx === indexImg ? (
                   <FaDotCircle className="text-white" />
                 ) : (
@@ -54,7 +62,7 @@ export default function ImageSlider() {
           </div>
         </div>
         <FaArrowLeft
-          className="h-[40px] w-[40px] text-white absolute top-[50%] left-8 cursor-pointer	"
+          className="h-[40px] w-[40px] text-white absolute top-[50%] left-8 cursor-pointer transition-all ease-out duration-500	"
           onClick={nextImgHandle}
         />
       </div>
