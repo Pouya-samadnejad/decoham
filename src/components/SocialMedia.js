@@ -2,6 +2,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+
 import Link from "next/link";
 export default function SocialMedia() {
   return (
