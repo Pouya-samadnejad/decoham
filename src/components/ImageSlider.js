@@ -8,7 +8,7 @@ import { FaDotCircle } from "react-icons/fa";
 import { FaRegDotCircle } from "react-icons/fa";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ImageSlider() {
   const images = [
@@ -24,6 +24,14 @@ export default function ImageSlider() {
   function prevImgHandle() {
     setIndexImg(indexImg === 0 ? images.length - 1 : indexImg - 1);
   }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndexImg((prevIndex) =>
+        prevIndex < images.length - 1 ? prevIndex + 1 : 0
+      );
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
