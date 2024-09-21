@@ -15,6 +15,9 @@ export default function Header() {
       <main>
         <ul class="flex gap-5 py-3 text-white font-semibold ">
           <li class="hover:text-[#ffcc00] transition-all delay-200">
+            <Link href="/contactus">تماس بام ما</Link>
+          </li>
+          <li class="hover:text-[#ffcc00] transition-all delay-200">
             <Link href="#">خدمات</Link>
           </li>
           <li class="hover:text-[#ffcc00] transition-all delay-200">
@@ -23,9 +26,7 @@ export default function Header() {
           <li class="hover:text-[#ffcc00] transition-all delay-200">
             <Link href="#">پروژه ها</Link>
           </li>
-          <li class="hover:text-[#ffcc00] transition-all delay-200">
-            <Link href="/contactus">تماس بام ما</Link>
-          </li>
+
           <li class="hover:text-[#ffcc00] transition-all delay-200">
             <Link href="#">وبلاگ</Link>
           </li>
