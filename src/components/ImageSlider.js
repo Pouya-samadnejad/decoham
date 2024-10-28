@@ -27,7 +27,7 @@ export default function ImageSlider() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndexImg((prevIndex) =>
-        prevIndex < images.length - 1 ? prevIndex + 1 : 0
+        prevIndex < images.length - 1 ? prevIndex + 1 : 0,
       );
     }, 5000);
     return () => clearInterval(interval);
@@ -37,10 +37,10 @@ export default function ImageSlider() {
     <>
       <div className="flex relatve z-0 overflow-hidden mx-auto  w-full transition-all ease-out duration-500">
         <FaArrowRight
-          className="h-[40px] w-[40px] text-white absolute top-[50%] right-8 cursor-pointer z-1	"
+          className="hidden  lg:block absolute h-10 w-10 text-white top-[50%] right-8 cursor-pointer lg:z-1	"
           onClick={prevImgHandle}
         />
-        <div className="pb-[35px] transition-all ease-out duration-500 mx-auto ">
+        <div className="pb-9 transition-all ease-out duration-500 mx-auto ">
           {images.map((image, index) => (
             <Image
               src={image.image}
@@ -53,7 +53,7 @@ export default function ImageSlider() {
               }
             />
           ))}
-          <div className="flex justify-center mx-auto mt-[-20px] w-4 h-4 pb-4 cursor-pointer transition-all ease-out duration-500 ">
+          <div className="flex justify-center mx-auto -mt-5 w-4 h-4 pb-4 cursor-pointer transition-all ease-out duration-500 ">
             {images.map((_, idx) => (
               <div
                 key={idx}
@@ -70,7 +70,7 @@ export default function ImageSlider() {
           </div>
         </div>
         <FaArrowLeft
-          className="h-[40px] w-[40px] text-white absolute top-[50%] left-8 cursor-pointer transition-all ease-out duration-500	"
+          className=" hidden h-10 w-10 text-white  top-[50%] left-8 cursor-pointer transition-all ease-out duration-500 lg:block absolute z-1 "
           onClick={nextImgHandle}
         />
       </div>

@@ -1,8 +1,8 @@
 export default function Description() {
   return (
-    <div className="flex my-[45px] mx-auto w-[1400px] gap-6 items-center justify-center ">
-      <div className="w-[50%] ml-12 ">
-        <p className="text-[18px] text-justify">
+    <div className="lg:flex  my-11 mx-auto lg:w-2/3 gap-12 items-center justify-center  ">
+      <div className="mx-3">
+        <p className="text-lg text-justify ">
           دکوراسیون داخلی یک هنر و حرفه است که به زیباسازی و بهبود فضای داخلی
           ساختمان‌ها می‌پردازد. دکوراسیون داخلی منزل نشان‌دهنده سلیقه، شخصیت و
           سبک زندگی افراد ساکن در آن است. دکوهام یک شرکت معتبر و پیشرو در زمینه
@@ -20,9 +20,9 @@ export default function Description() {
           آرزوهای شما در فضای داخلی منزل، خانه شما را به بهشت خود تبدیل می‌کند.
         </p>
       </div>
-      <div className="w-[175px] h-[175px] border-8 border-solid border-[#ffcc00] rotate-45 ">
+      <div className=" border-8 border-solid border-[#ffcc00] rotate-45 w-40 h-40 mx-auto mt-10 lg:mt-0  ">
         <div className="rotate-[315deg]">
-          <p className="text-9xl font-bold text-center ">15</p>
+          <p className="text-8xl font-bold text-center ">۱۵</p>
           <p className="text-3xl font-semibold -m-11 mx-auto text-center mt-2">
             سال سابقه
           </p>

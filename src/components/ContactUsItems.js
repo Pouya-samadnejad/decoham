@@ -7,28 +7,28 @@ const items = [
     title: "ایمیل",
     text: "info@decoham.com",
     icon: (
-      <IoMdMail class="w-16 h-16 p-3 hover:text-[#ffcc00] transition-all delay-200" />
+      <IoMdMail className="w-16 h-16 p-3 hover:text-[#ffcc00] transition-all delay-200" />
     ),
   },
   {
     title: "شماره تماس",
     text: "09001056040",
     icon: (
-      <FaPhone class="w-16 h-16 p-3 hover:text-[#ffcc00] transition-all delay-200" />
+      <FaPhone className="w-16 h-16 p-3 hover:text-[#ffcc00] transition-all delay-200" />
     ),
   },
   {
     title: "آدرس",
     text: "تهران، سیاهسنگ کوچه دانش نه ‌کوهستان دوم",
     icon: (
-      <FaLocationDot class="w-16 h-16 p-3 hover:text-[#ffcc00] transition-all delay-200" />
+      <FaLocationDot className="w-16 h-16 p-3 hover:text-[#ffcc00] transition-all delay-200" />
     ),
   },
 ];
 
 export default function ContactUsItems() {
   return (
-    <div class="px-14 flex justify-between py-14">
+    <div className="px-14 lg:flex justify-between py-14">
       {items.map((item) => (
         <ContactUsIcon key={item.title} {...item} />
       ))}
